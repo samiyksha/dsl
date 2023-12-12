@@ -1,0 +1,46 @@
+print("linear Search")
+t=int(input("Enter the number of students: "))
+list1=[]
+
+for i in range(t):
+    rollno=int(input("Enter roo number : "))
+    list1.append(rollno)
+print(list1)
+    
+search_num=int(input("Enter roll number to be searched: "))
+
+def search(list1,t,search_num):
+    for i in range(0,t):
+        if(list1[i]==search_num):
+            return i
+    return -1
+result=search(list1,t,search_num)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at location",result)
+print("*************************************")
+print("Sentinal Search")
+li=[]
+tot1=int(input("Enter the number of students: "))
+for i in range(tot1): 
+    roll=int(input("Enter the roll number: ")) 
+    li.append(roll)
+print(li)
+
+sear=int(input("Enter the roll number of student to be searched:"))
+def sentinel_search(li,sear):
+    size=len(li) 
+    li.append(sear) 
+    i=0 
+    while(li[i]!=sear): 
+        i=i+1 
+    if(i==size): 
+        return None 
+    else: 
+        return i
+result=sentinel_search(li,sear)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at location",result)
